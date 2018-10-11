@@ -39,10 +39,7 @@ class CommentForm extends Component {
   }
 
   onChange(e) {
-    e.preventDefault();
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -77,15 +74,15 @@ class CommentForm extends Component {
 }
 
 CommentForm.propTypes = {
-  addComment: PropTypes.func.isRequired,
+  addPost: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired,
-  postId: PropTypes.string.isRequired
+  postId: PropTypes.string.isRequired,
+  errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  errors: state.errors,
-  auth: state.auth
+  auth: state.auth,
+  errors: state.errors
 });
 
 export default connect(
