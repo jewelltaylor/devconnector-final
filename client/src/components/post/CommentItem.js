@@ -42,7 +42,7 @@ class CommentItem extends Component {
   }
 }
 
-const mapStateToProps = stat => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 
